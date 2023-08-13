@@ -1,11 +1,13 @@
 from openpyxl import load_workbook
 import os
+from conftest import RESOURCES_DIR
 
 
 # TODO оформить в тест, добавить ассерты и использовать универсальный путь
 
 def test_xlsx():
-    workbook = load_workbook('resources/file_example_XLSX_50.xlsx')
+    workbook_path = os.path.join(RESOURCES_DIR,'file_example_XLSX_50.xlsx' )
+    workbook = load_workbook(workbook_path)
     sheet = workbook.active
     row = 3
     column = 2
