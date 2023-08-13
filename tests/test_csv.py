@@ -10,8 +10,7 @@ def test_csv():
     if not os.path.exists(resources_dir):
         os.mkdir('resources')
 
-    csv_file_path = f'{resources_dir}/new_csv.csv'
-
+    csv_file_path = os.path.join(resources_dir,'new_csv.csv')
     with open(csv_file_path, 'w') as csv_file:
         csvwriter = csv.writer(csv_file, delimiter=';')
         csvwriter.writerow(['Bonny', 'Born', 'Peter'])
