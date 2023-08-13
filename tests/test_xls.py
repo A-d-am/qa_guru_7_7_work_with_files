@@ -1,9 +1,14 @@
+import os
 import xlrd
+from conftest import RESOURCES_DIR
+
+
 # TODO оформить в тест, добавить ассерты и использовать универсальный путь
 
-def test_xls():
 
-    book = xlrd.open_workbook('resources/file_example_XLS_10.xls')
+def test_xls():
+    xls_file_path = os.path.join(RESOURCES_DIR, 'file_example_XLS_10.xls')
+    book = xlrd.open_workbook(xls_file_path)
 
     print(f'Количество листов {book.nsheets}')
     print(f'Имена листов {book.sheet_names()}')
