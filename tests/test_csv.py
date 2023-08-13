@@ -10,7 +10,7 @@ def test_csv():
     if not os.path.exists(resources_dir):
         os.mkdir('resources')
 
-    csv_file_path = os.path.join(resources_dir,'new_csv.csv')
+    csv_file_path = os.path.join(resources_dir, 'new_csv.csv')
     with open(csv_file_path, 'w') as csv_file:
         csvwriter = csv.writer(csv_file, delimiter=';')
         csvwriter.writerow(['Bonny', 'Born', 'Peter'])
@@ -26,6 +26,5 @@ def test_csv():
                                                             f"expected {['Bonny', 'Born', 'Peter']}, "
                                                             f"got {csv_file_rows[0]}")
     assert csv_file_rows[1] == ['Alex', 'Serj', 'Yana'], (f"Wrong data in row {1}: "
-                                                            f"expected {['Alex', 'Serj', 'Yana']}, "
-                                                            f"got {csv_file_rows[1]}")
-
+                                                          f"expected {['Alex', 'Serj', 'Yana']}, "
+                                                          f"got {csv_file_rows[1]}")
