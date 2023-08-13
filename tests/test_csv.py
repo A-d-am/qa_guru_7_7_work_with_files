@@ -1,15 +1,13 @@
 import csv
 import os
-from conftest import TESTS_ROOT_PATH
+from conftest import RESOURCES_DIR
 
 
 def test_csv():
-    resources_dir = os.path.join(TESTS_ROOT_PATH, 'resources')
-
-    if not os.path.exists(resources_dir):
+    if not os.path.exists(RESOURCES_DIR):
         os.mkdir('resources')
 
-    csv_file_path = os.path.join(resources_dir, 'new_csv.csv')
+    csv_file_path = os.path.join(RESOURCES_DIR, 'new_csv.csv')
     with open(csv_file_path, 'w') as csv_file:
         csvwriter = csv.writer(csv_file, delimiter=';')
         csvwriter.writerow(['Bonny', 'Born', 'Peter'])
