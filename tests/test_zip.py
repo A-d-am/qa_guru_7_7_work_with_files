@@ -2,6 +2,7 @@ import zipfile
 import os
 from conftest import RESOURCES_DIR
 
+
 def test_zip():
     zip_file_path = os.path.join(RESOURCES_DIR, 'hello.zip')
     with zipfile.ZipFile(zip_file_path) as hellozip:
