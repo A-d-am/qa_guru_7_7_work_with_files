@@ -4,8 +4,7 @@ from conftest import TESTS_ROOT_PATH
 
 
 def test_csv():
-    tests_dir = TESTS_ROOT_PATH
-    resources_dir = os.path.join(tests_dir, 'resources')
+    resources_dir = os.path.join(TESTS_ROOT_PATH, 'resources')
 
     if not os.path.exists(resources_dir):
         os.mkdir('resources')
