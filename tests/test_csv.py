@@ -8,7 +8,7 @@ def test_csv():
         os.mkdir('resources')
 
     csv_file_path = os.path.join(RESOURCES_DIR, 'new_csv.csv')
-    with open(csv_file_path, 'w') as csv_file:
+    with open(csv_file_path, 'w', newline="") as csv_file:
         csvwriter = csv.writer(csv_file, delimiter=';')
         csvwriter.writerow(['Bonny', 'Born', 'Peter'])
         csvwriter.writerow(['Alex', 'Serj', 'Yana'])
