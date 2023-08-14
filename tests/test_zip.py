@@ -12,4 +12,5 @@ def test_zip():
         assert 'hello/Hello.txt' in all_files_in_zip, f"No file {'Hello.txt'} in zip with name {'hello.zip'}"
         assert text == b'Hello, World!'
 
-    os.remove(os.path.join(RESOURCES_DIR, 'hello'))
+    os.remove(os.path.join(RESOURCES_DIR, 'hello', 'Hello.txt'))
+    os.rmdir(os.path.join(RESOURCES_DIR, 'hello'))
